@@ -10,12 +10,11 @@ export function TicketRow({ ticket }: { ticket: Ticket }) {
       <td className="px-6 py-4 text-sm text-gray-500 dark:text-gray-400 font-mono whitespace-nowrap">
         {ticket.id}
       </td>
-      <td className="px-6 py-4 ">
+      <td className="px-6 py-4">
         <div className="flex items-center">
           <div className="w-8 h-8 rounded-full bg-brand-dark dark:bg-brand-light flex items-center justify-center text-xs font-bold text-brand-light dark:text-brand-dark mr-3 shrink-0">
             {ticket.customerName.charAt(0)}
           </div>
-          {/* whitespace-nowrap sayesinde isim asla alt satıra geçmez */}
           <span className="text-sm font-medium text-gray-900 dark:text-white">
             {ticket.customerName}
           </span>

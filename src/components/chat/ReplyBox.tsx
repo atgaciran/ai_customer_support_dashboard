@@ -16,7 +16,7 @@ export function ReplyBox({ ticketId, conversationHistory }: ReplyBoxProps) {
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
-  const addReply = useTicketStore((state) => state.addMessage);
+  const addReply = useTicketStore((state) => state.addReply);
 
   // 1. GÖNDERME İŞLEMİ (Optimistic UI & Enter Kısayolu)
   const handleSend = () => {
