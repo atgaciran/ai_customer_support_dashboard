@@ -18,6 +18,23 @@ This project is built with a focus on modularity, performance, and clean code pr
 
 ---
 
+### 📂 Folder Structure
+
+The project follows a feature-based and modular folder structure to maintain clean architecture:
+
+```
+.
+├── public/            # Static assets and images
+└── src/
+    ├── actions/       # Server actions and backend logic operations
+    ├── app/           # Next.js App Router pages and layouts
+    ├── components/    # Reusable UI components
+    ├── lib/           # Utility functions, mock data, and configurations
+    ├── store/         # Zustand store for global state management
+    └── types/         # TypeScript interfaces and type definitions
+```
+    
+
 ## 🚀 Getting Started
 
 Follow these steps to get the project up and running on your local machine.
