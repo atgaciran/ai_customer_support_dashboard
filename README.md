@@ -60,8 +60,3 @@ Start the development server with the following command:
 npm run dev
 ```
 Once the process is complete, open your browser and navigate to `http://localhost:3000` to view the application.
-
-
-## ⚠️ Important Notes
-* **Testing Empty State:** To test the "No tickets found" view, you can empty the ticket list in `lib/mockData.ts`.
-* **Deployment**: When deploying to platforms like Vercel, remember to add your IONET_API_KEY, IONET_BASE_URL, and IONET_MODEL to the Environment Variables settings.
