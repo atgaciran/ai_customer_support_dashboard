@@ -1,3 +1,11 @@
+/**
+ * @file app/page.tsx
+ * @description Landing / hero page for the Attimo Support application.
+ * Displays a full-screen dark-themed hero section with the company logo,
+ * a marketing slogan, and a call-to-action button that navigates to the login page.
+ * This is the first page users see when visiting the root URL ("/").
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,12 +13,13 @@ export default function HomePage() {
   return (
     <div className="min-h-dvh bg-brand-dark flex flex-col items-center justify-center relative overflow-hidden">
       
-      {/* Atmosferik arka plan ışıması */}
+      {/* Atmospheric ambient glow effect — a large, soft, blurred circle
+          positioned behind the content to add visual depth */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-brand-light/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="z-10 flex flex-col items-center space-y-10 text-center px-6">
         
-        {/* Logo Alanı */}
+        {/* Company Logo — uses Next.js Image with fill mode for responsive sizing */}
         <div className="relative w-56 h-20">
           <Image
             src="/images/logo_light.png"
@@ -21,7 +30,7 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Vurucu Metin (Slogan) */}
+        {/* Hero text / marketing slogan section */}
         <div className="space-y-4 max-w-xl">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-brand-light">
             Redefine Customer Support Experience
@@ -31,12 +40,14 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Yönlendirme Butonu */}
+        {/* Call-to-action button — navigates to the login page.
+            Includes a hover-animated arrow icon and a glowing shadow effect. */}
         <Link
           href="/login"
           className="group relative inline-flex items-center justify-center px-8 py-4 font-semibold text-brand-dark bg-brand-light rounded-full transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(232,232,232,0.1)] hover:shadow-[0_0_50px_rgba(232,232,232,0.25)]"
         >
           Access Dashboard
+          {/* Right arrow icon — slides right on hover via group-hover */}
           <svg
             className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
             fill="none"

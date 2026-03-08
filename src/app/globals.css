@@ -1,19 +1,27 @@
+/**
+ * @file app/globals.css
+ * @description Global stylesheet for the AI Customer Support Dashboard.
+ * Imports Tailwind CSS v4, configures dark mode to work with the `next-themes`
+ * library (class-based toggling), and defines the custom brand color palette.
+ */
+
 @import "tailwindcss";
 
-/* next-themes'in kullandığı .dark class'ını Tailwind'e tanıtıyoruz */
+/* Register the .dark class variant so Tailwind's dark: utilities respond to
+   next-themes' class-based dark mode toggling instead of the OS preference */
 @variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  /* Next.js'in varsayılan font değişkenleri (silmemekte fayda var) */
+  /* Next.js default Geist font variable bindings (used by the framework) */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   
-  /* Markamıza ait özel renkler */
+  /* Custom brand colors — deep navy for dark surfaces, soft gray for light surfaces */
   --color-brand-dark: #011534;
   --color-brand-light: #e8e8e8;
 }
 
-/* Sayfanın temel font ayarı */
+/* Base body font stack: prefer Geist Sans, fall back to system sans-serif */
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
